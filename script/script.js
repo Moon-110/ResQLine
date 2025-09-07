@@ -26,9 +26,20 @@ const calls = document.getElementsByClassName('cart-call-button');
 for(let call of calls){
     call.addEventListener('click', function(){
         const serviceName = call.parentNode.parentNode.children[1].innerText;
-
         const serviceNumber = call.parentNode.parentNode.children[3].innerText;
-        alert(`Service Name: ${serviceName} \nService Number: ${serviceNumber}`);
+
+        const coins=document.getElementById('call-coin');
+        const currentCoins = Number(coins.innerText);
+
+        if(currentCoins <= 20){
+            alert("Collect more coins");
+            return
+        }
+
+       alert(`Service Name: ${serviceName} \nService Number: ${serviceNumber}`);
+       const newAvailableCoins= currentCoins - 20;
+
+       coins.innerText=newAvailableCoins;
     })
 }
 
