@@ -1,7 +1,3 @@
-function getElement(id){
-    const element = document.getElementById(id);
-    return element;
-}
 
 
 // heart icon click count 
@@ -28,6 +24,10 @@ for(let call of calls){
         const serviceName = call.parentNode.parentNode.children[1].innerText;
         const serviceNumber = call.parentNode.parentNode.children[3].innerText;
 
+        const data= {
+        date: new Date().toLocaleTimeString()
+    }
+
         const coins=document.getElementById('call-coin');
         const currentCoins = Number(coins.innerText);
 
@@ -36,12 +36,33 @@ for(let call of calls){
             return
         }
 
+        const callHistory=document.getElementById('call-history');
+
+        const newCart = document.createElement('div');
+        newCart.innerHTML =`
+        <div id="call-history" class="flex justify-around items-center my-3 p-3 bg-[#fafafa] rounded-lg shadow-xl text-[14px]">
+                       
+                        <div class="w-[70%]">
+                        
+                             <h3 class="font-semibold">${serviceName}</h3>
+                             <p>${serviceNumber}</p>
+                        </div>
+                         <p>${data.date}</p>
+
+        `;
+
+        callHistory.append(newCart);
+
+
+
        alert(`Service Name: ${serviceName} \nService Number: ${serviceNumber}`);
        const newAvailableCoins= currentCoins - 20;
 
        coins.innerText=newAvailableCoins;
     })
 }
+
+
 
     
         
