@@ -27,12 +27,22 @@
 <body>
     
     <header class="w-full min-h-[100px] border-2 border-e-red-200">
-        <nav>
-            <ul>
-                <li><a href="">List - 1</a></li>
-                <li><a href="">List - 2</a></li>
-                <li><a href="">List - 3</a></li>
-            </ul>
+        <nav class="nav-parent flex justify-between items-center px-13">
+            <div class="left-nav flex justify-center items-center gap-2">
+                <img class="w-[80px]" src="./assets/logo-dark.png" alt="">
+                <h2 class="font-extrabold  text-[#006747]">Emergency <br> Service</h2>
+            </div>
+            <div class="right-div flex justify-center items-center gap-5">
+                <div class="love-icon flex justify-center items-center gap-3 bg-[#41ff6b1a] rounded-3xl p-2 px-6">
+                    <p class="font-extrabold">0</p>
+                    <img class="w-[30px]" src="./assets/heart.png" alt="">
+                </div>
+                <div class="coin flex justify-center items-center gap-3 bg-[#41ff6b1a] rounded-3xl p-2 px-6">
+                    <p class="font-extrabold">100</p>
+                    <img class="w-[30px]" src="./assets/coin.png" alt="">
+                </div>
+                <button class="btn bg-[#00A63E] font-extrabold rounded-3xl px-6"><span>0</span> Copy</button>
+            </div>
         </nav>
     </header>
 
