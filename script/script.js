@@ -13,6 +13,18 @@ for (let heart of heartIcons) {
     });
 }
 
+// copy count
+const copyIcons = document.getElementsByClassName('copy-icons')
+const copyCount = document.getElementById('copy-count');
+for(let copy of copyIcons){
+    copy.addEventListener('click', function(){
+        let currentCopyCount=Number(copyCount.innerText);
+        let newCopyCount=currentCopyCount+1;
+
+        copyCount.innerText=newCopyCount;
+    })
+}
+
 
 
 // call functionality
