@@ -48,7 +48,7 @@ for(let call of calls){
             return
         }
 
-        const callHistory=document.getElementById('call-history');
+        const callHistory=document.getElementById('call-history-btn');
 
         const newCart = document.createElement('div');
         newCart.innerHTML =`
@@ -73,6 +73,14 @@ for(let call of calls){
        coins.innerText=newAvailableCoins;
     })
 }
+
+
+// clear history button
+const clear= document.getElementById('clear-button').addEventListener('click', function(){
+    const callHistory= document.getElementById('call-history-btn');
+
+    callHistory.innerHTML='';
+})
 
 
 
